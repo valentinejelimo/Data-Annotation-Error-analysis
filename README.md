@@ -17,6 +17,7 @@ Guideline confusion from project switching accounts for 35.3% of Platform A's er
 5. Does training help? → Yes, but workflow design matters more (1.5pp improvement vs 8pp from project lock)
 6. What's the business impact? → Platform A spends 13.2% more per annotation due to rework
 
+find full documentation : [Documentation](https://drive.google.com/file/d/1AiYvTU74TN__JZ3t_dxyFIEpwjBh_Zh4/view?usp=sharing)
 
 
 
