@@ -75,7 +75,7 @@ SELECT
     COUNT(*) AS occurrences,
     ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER(), 2) AS percentage_of_total
 FROM annotation
-WHERE error_flag = 1  -- Only look at actual errors
+WHERE error_flag = 1 
 GROUP BY error_type
 ORDER BY occurrences DESC;
 ```
@@ -144,7 +144,6 @@ ORDER BY guideline_confusion_errors DESC;
 
 ---Project Switching Impact
 ```sql
--- First, identify annotators who worked on multiple projects
 WITH annotator_project_counts AS (
     SELECT 
         annotator_id,
@@ -189,7 +188,7 @@ SELECT
     ROUND(AVG(annotator_experience_days), 0) AS avg_experience_days
 FROM annotation
 GROUP BY annotator_id, platform
-HAVING COUNT(*) >= 50  -- Minimum 50 annotations for statistical significance
+HAVING COUNT(*) >= 50 
 ORDER BY error_rate_pct ASC, total_annotations DESC
 LIMIT 20;
 ```
